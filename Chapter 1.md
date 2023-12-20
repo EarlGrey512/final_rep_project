@@ -1,8 +1,8 @@
-## README
-
-Repository for my final project related to a project I have completed and my goal is to transform it with thesisdown and macdown into a reproducible format!
-
-The scope of this project entails analyzing an existing bus route in Hamilton and then seeing how it can be optimized. The bus route being analyzed in this project will be 52 Dundas.
+---
+output:
+  html_document: default
+  pdf_document: default
+---
 
 # Chapter 1: Route Alignment 
 ___
@@ -15,3 +15,6 @@ Using Google Maps and Remix, the roundtrip distance, actual length of the route 
 According to the census data, and route characteristics from OpenStreetMaps, the population size served by the route is approximately 8245 in both directions. The service coverage area within 400 m of the local bus. Below is a table outline the following characteristics.
 
 Table 1 - 52 Dundas route characteristics
+
+
+
