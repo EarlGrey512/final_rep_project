@@ -108,40 +108,9 @@ singlespacing, % Single line spacing, alternatives: onehalfspacing or doublespac
 % or, if there is a bst file you like, just get rid of all this biblatex stuff and go back to bibtex.
 
 % This code is to fix cslreferences in new pandoc see: https://github.com/mpark/wg21/issues/54
-%%\newlength{\cslhangindent}
-%\setlength{\cslhangindent}{1.5em}
-%\newenvironment{CSLReferences}%
-%  {}%
-%  {\par}
 %
 % https://github.com/ismayc/thesisdown/issues/133
 % From {rticles}
-\newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
-\newlength{\cslhangindent}
-\setlength{\cslhangindent}{1.5em}
-% for Pandoc 2.8 to 2.10.1
-\newenvironment{cslreferences}%
-  {}%
-  {\par}
-% For Pandoc 2.11+
-% As noted by @mirh [2] is needed instead of [3] for 2.12
-\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
- {% don't indent paragraphs
-  \setlength{\parindent}{0pt}
-  % turn on hanging indent if param 1 is 1
-  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
-  % set entry spacing
-  \ifnum #2 > 0
-  \setlength{\parskip}{#2\baselineskip}
-  \fi
- }%
- {}
-\usepackage{calc} % for calculating minipage widths
-\newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}}
-\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 %----------------------------------------------------------------------------------------
 % Collect all your header information from the chapters here, things like acronyms, custom commands, necessary packages, etc.
@@ -399,128 +368,32 @@ But mostly I had fun.
 
 \mainmatter % here the regular arabic numbering starts
 \pagestyle{thesis}
-\hypertarget{preface}{%
-\chapter*{Preface}\label{preface}}
-\addcontentsline{toc}{chapter}{Preface}
+\hypertarget{this-is-the-degree-you-are-aiming-for-with-this-thesis}{%
+\chapter{This is the degree you are aiming for with this thesis}\label{this-is-the-degree-you-are-aiming-for-with-this-thesis}}
 
-Welcome to the \emph{R Markdown} thesis template. This template is based on (and in many places copied directly from) the Reed College LaTeX template, but hopefully it will provide a nicer interface for those that have never used TeX or LaTeX before. Using \emph{R Markdown} will also allow you to easily keep track of your analyses in \textbf{R} chunks of code, with the resulting plots and output included as well. The hope is this \emph{R Markdown} template gets you in the habit of doing reproducible research, which benefits you long-term as a researcher, but also will greatly help anyone that is trying to reproduce or build onto your results down the road.
-
-Hopefully, you won't have much of a learning period to go through and you will reap the benefits of a nicely formatted thesis. The use of LaTeX in combination with \emph{Markdown} is more consistent than the output of a word processor, much less prone to corruption or crashing, and the resulting file is smaller than a Word file. While you may have never had problems using Word in the past, your thesis is likely going to be about twice as large and complex as anything you've written before, taxing Word's capabilities. After working with \emph{Markdown} and \textbf{R} together for a few weeks, we are confident this will be your reporting style of choice going forward.
-
-\textbf{Why use it?}
-
-\emph{R Markdown} creates a simple and straightforward way to interface with the beauty of LaTeX. Packages have been written in \textbf{R} to work directly with LaTeX to produce nicely formatting tables and paragraphs. In addition to creating a user friendly interface to LaTeX, \emph{R Markdown} also allows you to read in your data, to analyze it and to visualize it using \textbf{R} functions, and also to provide the documentation and commentary on the results of your project. Further, it allows for \textbf{R} results to be passed inline to the commentary of your results. You'll see more on this later.
-
-\textbf{Who should use it?}
-
-Anyone who needs to use data analysis, math, tables, a lot of figures, complex cross-references, or who just cares about the final appearance of their document should use \emph{R Markdown}. Of particular use should be anyone in the sciences, but the user-friendly nature of \emph{Markdown} and its ability to keep track of and easily include figures, automatically generate a table of contents, index, references, table of figures, etc. should make it of great benefit to nearly anyone writing a thesis project.
-
-\textbf{For additional help with bookdown}
-
-Please visit \href{https://bookdown.org/yihui/bookdown/}{the free online bookdown reference guide}.
+Placeholder
 
 \hypertarget{rmd-basics}{%
 \chapter{R Markdown Basics}\label{rmd-basics}}
 
-Here is a brief introduction into using \emph{R Markdown}. \emph{Markdown} is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. \emph{R Markdown} provides the flexibility of \emph{Markdown} with the implementation of \textbf{R} input and output. For more details on using \emph{R Markdown} see \url{https://rmarkdown.rstudio.com}.
-
-Be careful with your spacing in \emph{Markdown} documents. While whitespace largely is ignored, it does at times give \emph{Markdown} signals as to how to proceed. As a habit, try to keep everything left aligned whenever possible, especially as you type a new paragraph. In other words, there is no need to indent basic text in the Rmd document (in fact, it might cause your text to do funny things if you do).
-
-Here is a reference to Angel (2000).
-
-\hypertarget{writing}{%
-\chapter{Writing}\label{writing}}
-
-You can use \texttt{R} code in your document. For example:
-
-`\texttt{markdown}\{r ch1-load-packages, message=FALSE\}
-plot(cars)
-\begin{verbatim}
-
-\end{verbatim}
-Warning: package `dplyr' was built under R version 4.3.2
-```
-
-Naming the code chunks is convenient for navigating your document. You can use chunk options to control what the code does and how it is displayed. See Yihui Xie's documentation about chunk options \url{https://yihui.org/knitr/options/}. In the chunk above \texttt{message=FALSE} forces the chunk to not display messages when the packages are loaded.
-
-Of course, unless you are explicitly illustrating/discussing the code, you might not want the code to appear in the thesis! As another example, a chunk would \emph{not} be displayed \emph{at all} in the output document if \texttt{echo=FALSE}.
-
-You can create elegant figures and tables using \texttt{R} and displaying them in your thesis.
-
-Figure \ref{fig:ch1-scatterplot} is an example of a figure generated using the package \texttt{ggplot}.
-\begin{figure}
-\includegraphics[width=0.8\linewidth]{thesis_files/figure-latex/ch1-scatterplot-1} \caption{\label{fig:ch1-scatterplot}Example of a scatterplot}\label{fig:ch1-scatterplot}
-\end{figure}
-Table \ref{tab:summary-statistics} is an example of a table created using the package \texttt{kableExtra}.
-\begin{table}
-
-\caption{\label{tab:ch1-table}\label{tab:summary-statistics}Example of a table with summary statistics}
-\centering
-\begin{tabular}[t]{llll}
-\toprule
-  &     displ &      year &      cyl\\
-\midrule
- & Min.   :1.600 & Min.   :1999 & Min.   :4.000\\
- & 1st Qu.:2.400 & 1st Qu.:1999 & 1st Qu.:4.000\\
- & Median :3.300 & Median :2004 & Median :6.000\\
- & Mean   :3.472 & Mean   :2004 & Mean   :5.889\\
- & 3rd Qu.:4.600 & 3rd Qu.:2008 & 3rd Qu.:8.000\\
-\addlinespace
- & Max.   :7.000 & Max.   :2008 & Max.   :8.000\\
-\bottomrule
-\end{tabular}
-\end{table}
-Table \ref{tab:summary-statistics-2} is the same as Table \ref{tab:summary-statistics}, but placed in landscape orientation. Landscape orientation is useful for wide tables or for large figures.
-
-\newpage
-\blandscape
-\begin{table}
-
-\caption{\label{tab:ch1-table-2}\label{tab:summary-statistics-2}Example of a table in a landscape page}
-\centering
-\begin{tabular}[t]{llll}
-\toprule
-  &     displ &      year &      cyl\\
-\midrule
- & Min.   :1.600 & Min.   :1999 & Min.   :4.000\\
- & 1st Qu.:2.400 & 1st Qu.:1999 & 1st Qu.:4.000\\
- & Median :3.300 & Median :2004 & Median :6.000\\
- & Mean   :3.472 & Mean   :2004 & Mean   :5.889\\
- & 3rd Qu.:4.600 & 3rd Qu.:2008 & 3rd Qu.:8.000\\
-\addlinespace
- & Max.   :7.000 & Max.   :2008 & Max.   :8.000\\
-\bottomrule
-\end{tabular}
-\end{table}
-\elandscape
-\newpage
+Placeholder
 
 \hypertarget{math-sci}{%
 \chapter{Mathematics and Science}\label{math-sci}}
 
+Placeholder
+
 \hypertarget{math}{%
 \section{Math}\label{math}}
 
-\TeX~is the best way to typeset mathematics. Donald Knuth designed \TeX~when he got frustrated at how long it was taking the typesetters to finish his book, which contained a lot of mathematics. One nice feature of \emph{R Markdown} is its ability to read LaTeX code directly.
-
-If you are doing a thesis that will involve lots of math, you will want to read the following section which has been commented out. If you're not going to use math, skip over or delete this next commented section.
-
-\[
-\sum_{j=1}^n (\delta\theta_j)^2 \leq {{\beta_i^2}\over{\delta_i^2 + \rho_i^2}}
-\left[ 2\rho_i^2 + {\delta_i^2\beta_i^2\over{\delta_i^2 + \rho_i^2}} \right] \equiv \omega_i^2
-\]
-
-From Informational Dynamics, we have the following (Dave Braden):
+\hypertarget{other-examples-of-reactions}{%
+\subsection{Other examples of reactions}\label{other-examples-of-reactions}}
 
 \hypertarget{physics}{%
 \section{Physics}\label{physics}}
 
-Many of the symbols you will need can be found on the math page \url{https://web.reed.edu/cis/help/latex/math.html} and the Comprehensive LaTeX Symbol Guide (\url{https://mirror.utexas.edu/ctan/info/symbols/comprehensive/symbols-letter.pdf}).
-
 \hypertarget{biology}{%
 \section{Biology}\label{biology}}
-
-You will probably find the resources at \url{https://www.lecb.ncifcrf.gov/~toms/latex.html} helpful, particularly the links to bsts for various journals. You may also be interested in TeXShade for nucleotide typesetting (\url{https://homepages.uni-tuebingen.de/beitz/txe.html}). Be sure to read the proceeding chapter on graphics and tables.
 
 \hypertarget{conclusion}{%
 \chapter*{Conclusion}\label{conclusion}}
@@ -532,30 +405,10 @@ If we don't want Conclusion to have a chapter number next to it, we can add the 
 
 And here's some other random info: the first paragraph after a chapter title or section head \emph{shouldn't be} indented, because indents are to tell the reader that you're starting a new paragraph. Since that's obvious after a chapter or section title, proper typesetting doesn't add an indent there.
 
-\backmatter
-
 \hypertarget{references}{%
 \chapter*{References}\label{references}}
 \addcontentsline{toc}{chapter}{References}
 
-\markboth{References}{References}
+Placeholder
 
-\noindent
-
-\setlength{\parindent}{-0.20in}
-\setlength{\leftskip}{0.20in}
-\setlength{\parskip}{8pt}
-
-\hypertarget{refs}{}
-\begin{CSLReferences}{1}{0}
-\leavevmode\vadjust pre{\hypertarget{ref-angel2000}{}}%
-Angel, E. (2000). \emph{Interactive computer graphics : A top-down approach with OpenGL}. Boston, MA: Addison Wesley Longman.
-
-\leavevmode\vadjust pre{\hypertarget{ref-angel2001}{}}%
-Angel, E. (2001a). \emph{Batch-file computer graphics : A bottom-up approach with QuickTime}. Boston, MA: Wesley Addison Longman.
-
-\leavevmode\vadjust pre{\hypertarget{ref-angel2002a}{}}%
-Angel, E. (2001b). \emph{Test second book by angel}. Boston, MA: Wesley Addison Longman.
-
-\end{CSLReferences}
 \end{document}
