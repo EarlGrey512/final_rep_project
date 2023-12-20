@@ -15,3 +15,5 @@ Using Google Maps and Remix, the roundtrip distance, actual length of the route 
 According to the census data, and route characteristics from OpenStreetMaps, the population size served by the route is approximately 8245 in both directions. The service coverage area within 400 m of the local bus. Below is a table outline the following characteristics.
 
 Table 1 - 52 Dundas route characteristics
+
+
