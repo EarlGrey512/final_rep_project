@@ -108,40 +108,9 @@ singlespacing, % Single line spacing, alternatives: onehalfspacing or doublespac
 % or, if there is a bst file you like, just get rid of all this biblatex stuff and go back to bibtex.
 
 % This code is to fix cslreferences in new pandoc see: https://github.com/mpark/wg21/issues/54
-%%\newlength{\cslhangindent}
-%\setlength{\cslhangindent}{1.5em}
-%\newenvironment{CSLReferences}%
-%  {}%
-%  {\par}
 %
 % https://github.com/ismayc/thesisdown/issues/133
 % From {rticles}
-\newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
-\newlength{\cslhangindent}
-\setlength{\cslhangindent}{1.5em}
-% for Pandoc 2.8 to 2.10.1
-\newenvironment{cslreferences}%
-  {}%
-  {\par}
-% For Pandoc 2.11+
-% As noted by @mirh [2] is needed instead of [3] for 2.12
-\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
- {% don't indent paragraphs
-  \setlength{\parindent}{0pt}
-  % turn on hanging indent if param 1 is 1
-  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
-  % set entry spacing
-  \ifnum #2 > 0
-  \setlength{\parskip}{#2\baselineskip}
-  \fi
- }%
- {}
-\usepackage{calc} % for calculating minipage widths
-\newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}}
-\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 %----------------------------------------------------------------------------------------
 % Collect all your header information from the chapters here, things like acronyms, custom commands, necessary packages, etc.
@@ -407,78 +376,7 @@ Placeholder
 \hypertarget{rmd-basics}{%
 \chapter{R Markdown Basics}\label{rmd-basics}}
 
-Here is a brief introduction into using \emph{R Markdown}. \emph{Markdown} is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. \emph{R Markdown} provides the flexibility of \emph{Markdown} with the implementation of \textbf{R} input and output. For more details on using \emph{R Markdown} see \url{https://rmarkdown.rstudio.com}.
-
-Be careful with your spacing in \emph{Markdown} documents. While whitespace largely is ignored, it does at times give \emph{Markdown} signals as to how to proceed. As a habit, try to keep everything left aligned whenever possible, especially as you type a new paragraph. In other words, there is no need to indent basic text in the Rmd document (in fact, it might cause your text to do funny things if you do).
-
-Here is a reference to Angel (2000).
-
-\hypertarget{writing}{%
-\chapter{Writing}\label{writing}}
-
-You can use \texttt{R} code in your document. For example:
-
-`\texttt{markdown}\{r ch1-load-packages, message=FALSE\}
-plot(cars)
-\begin{verbatim}
-
-\end{verbatim}
-Warning: package `dplyr' was built under R version 4.3.2
-```
-
-Naming the code chunks is convenient for navigating your document. You can use chunk options to control what the code does and how it is displayed. See Yihui Xie's documentation about chunk options \url{https://yihui.org/knitr/options/}. In the chunk above \texttt{message=FALSE} forces the chunk to not display messages when the packages are loaded.
-
-Of course, unless you are explicitly illustrating/discussing the code, you might not want the code to appear in the thesis! As another example, a chunk would \emph{not} be displayed \emph{at all} in the output document if \texttt{echo=FALSE}.
-
-You can create elegant figures and tables using \texttt{R} and displaying them in your thesis.
-
-Figure \ref{fig:ch1-scatterplot} is an example of a figure generated using the package \texttt{ggplot}.
-\begin{figure}
-\includegraphics[width=0.8\linewidth]{thesis_files/figure-latex/ch1-scatterplot-1} \caption{\label{fig:ch1-scatterplot}Example of a scatterplot}\label{fig:ch1-scatterplot}
-\end{figure}
-Table \ref{tab:summary-statistics} is an example of a table created using the package \texttt{kableExtra}.
-\begin{table}
-
-\caption{\label{tab:ch1-table}\label{tab:summary-statistics}Example of a table with summary statistics}
-\centering
-\begin{tabular}[t]{llll}
-\toprule
-  &     displ &      year &      cyl\\
-\midrule
- & Min.   :1.600 & Min.   :1999 & Min.   :4.000\\
- & 1st Qu.:2.400 & 1st Qu.:1999 & 1st Qu.:4.000\\
- & Median :3.300 & Median :2004 & Median :6.000\\
- & Mean   :3.472 & Mean   :2004 & Mean   :5.889\\
- & 3rd Qu.:4.600 & 3rd Qu.:2008 & 3rd Qu.:8.000\\
-\addlinespace
- & Max.   :7.000 & Max.   :2008 & Max.   :8.000\\
-\bottomrule
-\end{tabular}
-\end{table}
-Table \ref{tab:summary-statistics-2} is the same as Table \ref{tab:summary-statistics}, but placed in landscape orientation. Landscape orientation is useful for wide tables or for large figures.
-
-\newpage
-\blandscape
-\begin{table}
-
-\caption{\label{tab:ch1-table-2}\label{tab:summary-statistics-2}Example of a table in a landscape page}
-\centering
-\begin{tabular}[t]{llll}
-\toprule
-  &     displ &      year &      cyl\\
-\midrule
- & Min.   :1.600 & Min.   :1999 & Min.   :4.000\\
- & 1st Qu.:2.400 & 1st Qu.:1999 & 1st Qu.:4.000\\
- & Median :3.300 & Median :2004 & Median :6.000\\
- & Mean   :3.472 & Mean   :2004 & Mean   :5.889\\
- & 3rd Qu.:4.600 & 3rd Qu.:2008 & 3rd Qu.:8.000\\
-\addlinespace
- & Max.   :7.000 & Max.   :2008 & Max.   :8.000\\
-\bottomrule
-\end{tabular}
-\end{table}
-\elandscape
-\newpage
+Placeholder
 
 \hypertarget{math-sci}{%
 \chapter{Mathematics and Science}\label{math-sci}}
@@ -513,10 +411,4 @@ And here's some other random info: the first paragraph after a chapter title or 
 
 Placeholder
 
-\hypertarget{refs}{}
-\begin{CSLReferences}{1}{0}
-\leavevmode\vadjust pre{\hypertarget{ref-angel2000}{}}%
-Angel, E. (2000). \emph{Interactive computer graphics : A top-down approach with OpenGL}. Boston, MA: Addison Wesley Longman.
-
-\end{CSLReferences}
 \end{document}

@@ -1,0 +1,131 @@
+---
+title: 'My Graduate Thesis'
+author: 'You R. Name'
+#date: 'May 20xx'
+university: 'McMaster University'
+faculty: 'Faculty of Science'
+department: 'School of Earth, Environment and Society'
+subject: 'Geography'
+supervisor: 'Antonio Paez'
+bdegree: 'B.Sc.' # Bachellor's Degree
+mdegree: ''   # Master's Degree (if any)
+# This is the degree you are aiming for with this thesis
+degree: 'Doctor of Philosophy'
+
+knit: bookdown::render_book
+site: bookdown::bookdown_site
+
+# Remove the hashtag to specify which version of output you would like.
+# Can only choose one at a time.
+output:
+  thesisdown::thesis_pdf: default 
+  keep_tex: true
+#  thesisdown::thesis_gitbook: default         
+#  thesisdown::thesis_word: default
+#  thesisdown::thesis_epub: default
+
+# If you are creating a PDF you'll need to write your preliminary content 
+# (e.g., abstract, acknowledgements) below or use code similar to line 25-26 
+# for the .RMD files. If you are NOT producing a PDF, delete or silence
+# lines 31-56 in this YAML header.
+lay_abstract: |
+  The lay abstract must be 150 words or less.
+  
+  It must explain the key goals and contributions of the thesis in lay terms that are accessible to the general public. 
+abstract: |
+  This is the abstract.
+  
+  I can write a really long abstract.
+# Note that a tab is needed on the line after the `|`. Subsequent paragraphs need to be indented too.
+acknowledgements: |
+  I want to thank a few people.
+  
+  This includes my friends.
+dedication: |
+  You can have a dedication here if you wish. 
+declarations: |
+  I did most of the research.
+  
+  Also the writting. 
+  
+  Sometimes I cried.
+  
+  But mostly I had fun.
+quotation: 'You may hate gravity, but gravity does not care'
+# Author of the quotation
+qauthor: 'Albert Einstein'
+# Specify the location where the bibliography file is found below
+bibliography: bib/thesis.bib
+# Download your specific csl file and refer to it in the line below.
+csl: csl/apa.csl
+lot: true
+lof: true
+---
+
+# This is the degree you are aiming for with this thesis
+
+Placeholder
+
+
+
+<!--chapter:end:index.Rmd-->
+
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+# Chapter 1: Route Alignment 
+___
+
+## 1.1 Route Directness
+Using Google Maps and Remix, the roundtrip distance, actual length of the route and the shortest path between the start-end stops were determined. In the northbound direction, the 52 Dundas route starts from Orchard at Pleasant and ends at Watson’s Lane Loop. In the southbound direction, the 52 Dundas route starts from Watson's Lane Loop and ends at Orchard at Pleasant. The roundtrip distance for the 52 Dundas route from northbound to southbound is 10.49 km. The actual length of the route is 5.2 km in both directions (northbound and southbound). The shortest path between the start-end stops is 5.1 km in both directions (northbound and southbound). Generally known, the ratio indicates the route directness. The ratio between the shortest path and the actual route is 0.98 in both directions meaning the route is quite direct.
+
+## 1.2 Service Coverage
+
+According to the census data, and route characteristics from OpenStreetMaps, the population size served by the route is approximately 8245 in both directions. The service coverage area within 400 m of the local bus. Below is a table outline the following characteristics.
+
+Table 1 - 52 Dundas route characteristics
+```{r echo - FALSE, results='asis'}
+library(knitr)
+kable(Route_Characteristics[1:7, ], caption = "52 Dundas route characteristics.")
+```
+
+
+
+<!--chapter:end:01-chap1.Rmd-->
+
+
+# Mathematics and Science {#math-sci}
+
+Placeholder
+
+
+## Math
+### Other examples of reactions
+## Physics
+## Biology
+
+<!--chapter:end:02-chap2.Rmd-->
+
+# Conclusion {-}
+
+If we don't want Conclusion to have a chapter number next to it, we can add the `{-}` attribute.
+
+**More info**
+
+And here's some other random info: the first paragraph after a chapter title or section head _shouldn't be_ indented, because indents are to tell the reader that you're starting a new paragraph. Since that's obvious after a chapter or section title, proper typesetting doesn't add an indent there.
+
+
+<!--chapter:end:03-conclusion.Rmd-->
+
+
+# References {-}
+
+Placeholder
+
+
+
+<!--chapter:end:99-references.Rmd-->
+
