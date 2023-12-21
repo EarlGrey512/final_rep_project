@@ -8,11 +8,8 @@ department: 'Civil Engineering'
 subject: 'Reproducible Research with Github and R'
 supervisor: 'Antonio Paez'
 bdegree: 'B.Eng.' # Bachellor's Degree
-
-
 knit: bookdown::render_book
 site: bookdown::bookdown_site
-
 # Remove the hashtag to specify which version of output you would like.
 # Can only choose one at a time.
 output:
@@ -58,9 +55,8 @@ if(!require(macdown))
 library(macdown)
 ```
 
-
+<!--
 BEGINNING HERE ADD THE DOCUMENTS THAT CONFORM THE MAIN BODY OF THE THESIS
-
 -->
 
 ```{r eval=!knitr::is_latex_output(), child=here::here("01-chap1.Rmd")}
@@ -71,7 +67,15 @@ BEGINNING HERE ADD THE DOCUMENTS THAT CONFORM THE MAIN BODY OF THE THESIS
 
 ```
 
-```{r eval=!knitr::is_latex_output(), child=here::here("03-conclusion.Rmd")}
+```{r eval=!knitr::is_latex_output(), child=here::here("03-chap3.Rmd")}
+
+```
+
+```{r eval=!knitr::is_latex_output(), child=here::here("04-chap4.Rmd")}
+
+```
+
+```{r eval=!knitr::is_latex_output(), child=here::here("05-conclusion.Rmd")}
 
 ```
 

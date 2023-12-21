@@ -1,0 +1,25 @@
+﻿Route,52,,,,Route,52,,,,,
+Ward,(All),,,,Ward,(All),,,,,
+Direction,Northbound,,,,Direction,Southbound,,,,Distribution of time periods,Distribution
+,,,,,,,,,,Early Morning (04:00-06:30),3%
+Stop Name,Weekday,Saturday,Sunday,,Stop Name,Weekday,Saturday,Sunday,,A.M. Peak (06:30-09:30),34%
+GOVERNOR'S at MAIN,10,NA,NA,,GOVERNOR'S at MAIN,7,NA,NA,,Mid-Day (09:30-15:00),18%
+OGILVIE at GOVERNORS,32,,,,OGILVIE at GOVERNORS,9,,,,P.M. Peak (15:00-18:00),29%
+OGILVIE at OLD ANCASTER,6,,,,OGILVIE at OLD ANCASTER,4,,,,Evening (18:00-22:00),12%
+OLD ANCASTER at DUNDANA,1,,,,OLD ANCASTER at PIMLICO,3,,,,Late Night (22:00-04:00),4%
+OLD ANCASTER opposite PLEASANT,2,,,,OLD ANCASTER at PLEASANT,0,,,,,100%
+ORCHARD at PLEASANT,40,,,,ORCHARD at PLEASANT,0,,,,,
+TURNBULL at TERRACE,2,,,,PLEASANT at EDENBRIDGE,5,,,,,
+TURNBULL opposite AUTUMN LEAF,5,,,,PLEASANT at GREEN MEADOW,4,,,,,
+TURNBULL opposite KINGS GATE,1,,,,PLEASANT at SUNRISE,0,,,,,
+WATSONS LANE LOOP,0,,,,PLEASANT opposite  AUTUMN LEAF,0,,,,,
+YORK at CAMERON,1,,,,WATSONS LANE LOOP,9,,,,,
+YORK at COOTES,14,,,,YORK at CAMERON,3,,,,,
+YORK at DONALD,1,,,,YORK at FIELDGATE,4,,,,,
+YORK at HUNTER,4,,,,YORK at KING,2,,,,,
+YORK at OLYMPIC,0,,,,YORK at MCKAY,1,,,,,
+YORK opposite FIELDGATE,3,,,,YORK at OLYMPIC,0,,,,,
+YORK opposite MCKAY,3,,,,YORK at WATSONS,7,,,,,
+YORK opposite WATSONS,1,,,,YORK at WILLETT,1,,,,,
+Grand Total,125,,,,YORK opposite CAIRNS,0,,,,,
+,,,,,Grand Total,60,,,,,

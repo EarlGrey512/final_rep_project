@@ -1,0 +1,70 @@
+# Service Demand and Evaluation
+___
+
+In this chapter, service demand and evaluation are explored! 
+
+### Service Demand
+Route 52 only runs during the periods of A.M. peak, midday and P.M. peak. Based on this we decided to allocate 34% to the A.M. peak, 32% to the midday period and the last 34% to the P.M. peak. In the data folder, the distribution of boardings at each stop along the route associated with each time period are detailed. From these results, load profile graphs can be generated. This is where the images of the figures should be displayed, however, it was unable to knit.
+
+
+```{r, echo=FALSE}
+
+read.csv("data/Load_Profile_Analysis_NB.csv")
+
+read.csv("data/Load_Profile_Analysis_SB.csv")
+```
+
+### Service Evaluation
+
+Use the data file labelled "Load Profile Analysis" to begin analyzing the how frequency changes throughout the time periods in a day. In order to evaluate the service utilization, the current frequency and the optimal frequency in each direction must be compared. Based on the steps, the results should be as follows.
+
+For the AM/PM peaks, the current frequency is higher than optimal and therefore the allocated service is over-utilized. Ideally the frequency should be decreased to the minimum of 1 bus per hour to save costs and avoid running empty buses. For the mid-day time period the frequency was 0 as no buses were running at the time however by analyzing the data from task 4 and 5 we can see that the frequency can be brought up to the minimum of 1 bus per hour to accommodate the demand for mid-day service.
+
+From the excel file, Load_Profile_Analysis, the desired occupancy of the buses operating on 52 Dundas have a desired occupancy of 35 and a capacity of 75 passengers. The total length route will be the summation of all the distances divided by 1000 to get the distance in kilometres.
+
+$$
+Total Distance = \sum (Distance To  Stop)/1000
+$$
+
+When analyzing the load profiles, setting up the table as such will make it easier to calculate the Frequencies.
+
+<!--
+ID | Name | Distance to next stop (m) | Boardings | AM Peak | Mid-Day | PM Peak |
+- | - | - | - | - | - | - |
+1 | ORCHARD at PLEASANT | 382 | 40 | 14 | 13 | 14 |
+2 | TURNBULL opposite KINGS GATE | 197 | 1 | 0 | 0 | 0  |
+3 | TURNBULL opposite AUTUMN LEAF | 296 | 5 | 2 | 2 | 2  |
+4 | TURNBULL at TERRACE | 582 | 2 | 1 | 1 | 1  |
+5 | OLD ANCASTER opposite PLEASANT | 443 | 2 | 1 | 1 | 1   |
+6 | OLD ANCASTER at DUNDANA | 129 | 1 | 0 | 0 | 0  |
+7 | OGILVIE at OLD ANCASTER | 342 | 6 | 2 | 2 | 2  |
+8 | OGILVIE at GOVERNORS | 213 | 32 | 11 | 10 | 11  |
+9 | GOVERNOR'S at MAIN | 445 | 10 | 3 | 3 | 3  |
+10 | YORK at COOTES | 170 | 14 | 5 | 4 | 5  |
+11 | YORK at HUNTER | 263 | 4 | 1 | 1 | 1  |
+12 | YORK at DONALD | 322 | 1 | 0 | 0 | 0  |
+13 | YORK at CAMERON | 503 | 1 | 0 | 0 | 0  |
+14 | YORK opposite MCKAY | 162 | 3 | 1 | 1 | 1  |
+15 | YORK opposite WATSONS | 251 | 1 | 0 | 0 | 0  |
+16 | YORK opposite FIELDGATE | 383 | 3 | 1 | 1 | 1  |
+17 | YORK at OLYMPIC | 203 | 0 | 0 | 0 | 0  |
+18 | WATSONS LANE LOOP |  | 0 |  |  |   |
+-->
+
+For the northbound direction, the frequency we found doing the Load Profile Method was found to be the same frequencies as calculated in Service Frequencies. The minimum frequency is 1 bus per hour for all time periods. With this reasoning, we determined that the service currently allocated within each time interval was appropriate. We assumed the desired occupancy of a 40 ft bus which requires 35 passengers and a capacity of 75 passengers.
+
+For the southbound direction, the frequency we found doing the Load Profile Method was found to be the same frequencies as calculated in Service Frequencies. The minimum frequency is 1 bus per hour for all time periods. With this reasoning, we determined that the service currently allocated within each time interval was appropriate. We assumed the desired occupancy of a 40 ft bus which requires 35 passengers and a capacity of 75 passengers.
+
+This is what the chart will look like for the **Northbound** direction.
+
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_graphics("figure/Load_Profile_Northbound.png", error = FALSE)
+
+```
+
+This is what the chart will look like for the **Southbound** direction.
+
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_graphics("figure/Load_Profile_Southbound.png", error = FALSE)
+
+```

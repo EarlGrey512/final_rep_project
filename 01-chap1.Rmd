@@ -1,10 +1,4 @@
----
-output:
-  pdf_document: default
-  html_document: default
----
-
-# Chapter 1: Route Alignment 
+# Route Alignment 
 ___
 
 ## 1.1 Route Directness
@@ -12,12 +6,26 @@ Using Google Maps and Remix, the roundtrip distance, actual length of the route 
 
 ## 1.2 Service Coverage
 
-According to the census data, and route characteristics from OpenStreetMaps, the population size served by the route is approximately 8245 in both directions. The service coverage area within 400 m of the local bus. Below is a table outline the following characteristics.
+According to the census data, and route characteristics from OpenStreetMaps, the population size served by the route is approximately 8245 in both directions. The service coverage area within 400 m of the local bus.
 
-Table 1 - 52 Dundas route characteristics
-```{r echo - FALSE, results='asis'}
-library(knitr)
-kable(Route_Characteristics[1:7, ], caption = "52 Dundas route characteristics.")
+52 Dundas route characteristics: 
+```{r, echo=FALSE}
+
+read.csv(file = "data/Route_Characteristics.csv")
+
 ```
 
+The information is also summarized below:
 
+Characteristic | Value
+- | -
+Roundtrip Distance | 10.49 km
+Actual Route Length | 5.2 km (inbound) and 5.2 km (outbound)
+Shortest Path | 5.1 km
+Ratio | 0.98
+Population | 8245
+Holistic Land Use | Residential
+Current Route Operation Cost | $144.9 k/year
+
+## 1.3 Land Use
+The northbound and southbound transit routes for 52 Dundas are both mainly comprised of residential land use considering it provides service to an area that is predominantly surrounded by housing infrastructure. Both directions also have few commercial and institutional land uses. This information was extracted with Remix. Alternatively, it can be extracted with census data for Hamilton.
