@@ -29,35 +29,35 @@ Holistic Land Use: Residential
 
 Current Route Operation Cost: $144.9 k/year
 
-##1.3 Land Use
+## 1.3 Land Use
 
 The northbound and southbound transit routes for 52 Dundas are both mainly comprised of residential land use considering it provides service to an area that is predominantly surrounded by housing infrastructure. Both directions also have few commercial and institutional land uses. This information was extracted with Remix.
 
-#2 Stop Accessibility
+# 2 Stop Accessibility
 In this section, using Google Earth and Remix, the exact number of stops on Route 52, and what amenities at each stop were identified. Google Street View at each stop was used to see what infrastructure is in place at each stop. 
 
 There are 19 stops in the southbound route which begins at Watson Lane Loop, and ends at Orchard at Pleasant. In the southbound route, 12 of the stops which make up 67% of stops, only had a post and sidewalk as infrastructure. 6 stops (33%) had benches, and only 2 (11%) of those stops had shelters.
 
 There are 18 stops in the northbound route which starts at Orchard at Pleasant stop and ends at Watson Lane Loop stop. In the northbound route, 13 stops (76%) only had a post as infrastructure, of which only 6 had sidewalks. There are 4 stops with benches (24%) where only 1 of those stops has a shelter as well. The York at Cootes stop is served by a Sobi Hub, making it the only stop either north or southbound to have that privilege.
 
-#3 Service Frequency and Fleet
+# 3 Service Frequency and Fleet
 The purpose of analyzing the service frequency of an existing transit system is to ensure that the level of service has adequate space to accommodate the maximum number of on-board passengers along the entire route over a given time period. Using Remix, both inbound and outbound timetable data were extracted to analyze both the weekday and weekend frequencies and fleet size.
 
-##3.1 Frequency Weekday
+## 3.1 Frequency Weekday
 The frequency weekday was analyzed for both inbound and outbound directions by graphing the
 average frequency of the existing service for certain time intervals. Based on the frequency data patterns observed for both inbound and outbound, the level of frequency was consistent along the entire route over different time periods for all stops. This was the case for 52 Dundas considering there was not much change in the level of service along the route. To represent the frequency weekday for this route, the frequency of the inbound stop Orchard at Pleasant, and the outbound stop Watson’s Lane Loop were used as a benchmark. The maximum frequency for both inbound and outbound is 1.67 buses/hr which occurs during both 06:30 – 09:30 AM and 15:00 – 18:00 PM peak hours.
 
-##3.2 Frequency Weekend
+## 3.2 Frequency Weekend
 Currently, Route 52 Dundas is not scheduled to run during weekends, hence the frequency for the weekend is zero. It could be that there is not enough demand or ridership during the weekends for the 52 Dundas area. This could be something to reconsider when reconfiguring the route.
 
-##3.3 Fleet Size
+## 3.3 Fleet Size
 The fleet size for Route 52 is 2 buses for both time periods during the Weekday. As Route 52 does not run-on weekends, there are no fleet sizes reported. The maximum fleet is 2 buses. The buses run every 30 minutes so for the first time period, there is one bus per hour and for the second time period, there is one bus every hour and a half.
 
-#4 Service Demand
+# 4 Service Demand
 Route 52 only runs during the periods of A.M. peak, midday and P.M. peak. Based on this we
 decided to allocate 34% to the A.M. peak, 32% to the midday period and the last 34% to the P.M. peak. In the data folder, the distribution of boardings at each stop along the route associated with each time period are detailed. From these results, load profile graphs can be generated. This is where the images of the figures should be displayed, however, it was unable to knit.
 
-#5 Service Evaluation
+# 5 Service Evaluation
 Using the data file labelled "Load Profile Analysis" to begine analyzing the how frequency changes throughout the time periods in a day. In order to evaluate the service utilization, the current frequency and the optimal frequency in each direction must be compared. Based on the steps, the results should be as follows.
 
 For the AM/PM peaks, the current frequency is higher than optimal and therefore the allocated service is over-utilized. Ideally the frequency should be decreased to the minimum of 1 bus per hour to save costs and avoid running empty buses. For the mid-day time period the frequency was 0 as no buses were running at the time however by analyzing the data from task 4 and 5 we can see that the frequency can be brought up to the minimum of 1 bus per hour to accommodate the demand for mid-day service. 
