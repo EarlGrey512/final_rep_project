@@ -5,7 +5,6 @@ Repository for my final project related to a project I have completed and my goa
 The scope of this project entails analyzing an existing bus route in Hamilton and then seeing how it can be optimized. The bus route being analyzed in this project will be 52 Dundas.
 
 # Chapter 1: Route Alignment 
-___
 
 ## 1.1 Route Directness
 Using Google Maps and Remix, the roundtrip distance, actual length of the route and the shortest path between the start-end stops were determined. In the northbound direction, the 52 Dundas route starts from Orchard at Pleasant and ends at Watson’s Lane Loop. In the southbound direction, the 52 Dundas route starts from Watson's Lane Loop and ends at Orchard at Pleasant. The roundtrip distance for the 52 Dundas route from northbound to southbound is 10.49 km. The actual length of the route is 5.2 km in both directions (northbound and southbound). The shortest path between the start-end stops is 5.1 km in both directions (northbound and southbound). Generally known, the ratio indicates the route directness. The ratio between the shortest path and the actual route is 0.98 in both directions meaning the route is quite direct.
@@ -34,14 +33,22 @@ Current Route Operation Cost: $144.9 k/year
 The northbound and southbound transit routes for 52 Dundas are both mainly comprised of residential land use considering it provides service to an area that is predominantly surrounded by housing infrastructure. Both directions also have few commercial and institutional land uses. This information was extracted with Remix.
 
 # 2 Stop Accessibility
-In this section, using Google Earth and Remix, the exact number of stops on Route 52, and what amenities at each stop were identified. Google Street View at each stop was used to see what infrastructure is in place at each stop. 
+In this section, using Google Earth and Remix, the exact number of stops on Route 52 can be counted, and the amenities at each stop were identified. Google Street View at each stop was used to see what infrastructure is in place at each stop. 
 
 There are 19 stops in the southbound route which begins at Watson Lane Loop, and ends at Orchard at Pleasant. In the southbound route, 12 of the stops which make up 67% of stops, only had a post and sidewalk as infrastructure. 6 stops (33%) had benches, and only 2 (11%) of those stops had shelters.
 
 There are 18 stops in the northbound route which starts at Orchard at Pleasant stop and ends at Watson Lane Loop stop. In the northbound route, 13 stops (76%) only had a post as infrastructure, of which only 6 had sidewalks. There are 4 stops with benches (24%) where only 1 of those stops has a shelter as well. The York at Cootes stop is served by a Sobi Hub, making it the only stop either north or southbound to have that privilege.
 
 # 3 Service Frequency and Fleet
-The purpose of analyzing the service frequency of an existing transit system is to ensure that the level of service has adequate space to accommodate the maximum number of on-board passengers along the entire route over a given time period. Using Remix, both inbound and outbound timetable data were extracted to analyze both the weekday and weekend frequencies and fleet size.
+The purpose of analyzing the service frequency of an existing transit system is to ensure that the level of service has adequate space to accommodate the maximum number of on-board passengers along the entire route over a given time period. Using Remix, both inbound and outbound timetable data were extracted to analyze both the weekday and weekend frequencies and fleet size. To find the service frequency, divide the total operating hours by the number of trips made by the bus which will give you the average time between each buss arrival along the route or at the stop. Keep in mind, frequency and headway are both terms used to describe the time intervals between buses on a particular route or at a specific bus stop. However, they represent this information in slightly different ways. Frequency refers to the number of bus trips or arrivals at a stop within a specific period, often expressed as the number of buses per hour. For example, a bus service with a frequency of 15 minutes means that a bus arrives approximately every 15 minutes at that stop. It will be calculated as 1/Time Interval. Headway represents the time interval between the departure or arrival of successive buses. It is the actual time that elapses between one bus leaving or arriving and the next bus following it at a particular stop or along a route.
+
+Headway and frequency can be converted in that:
+
+Frequency = 1/Headway
+
+Headway = 1/Frequency
+
+When referring to bus service, a higher frequency or shorter headway generally means better service, providing passengers with more options and shorter waiting times between buses.
 
 ## 3.1 Frequency Weekday
 The frequency weekday was analyzed for both inbound and outbound directions by graphing the
@@ -58,7 +65,7 @@ Route 52 only runs during the periods of A.M. peak, midday and P.M. peak. Based 
 decided to allocate 34% to the A.M. peak, 32% to the midday period and the last 34% to the P.M. peak. In the data folder, the distribution of boardings at each stop along the route associated with each time period are detailed. From these results, load profile graphs can be generated. This is where the images of the figures should be displayed, however, it was unable to knit.
 
 # 5 Service Evaluation
-Using the data file labelled "Load Profile Analysis" to begine analyzing the how frequency changes throughout the time periods in a day. In order to evaluate the service utilization, the current frequency and the optimal frequency in each direction must be compared. Based on the steps, the results should be as follows.
+Use the data file labelled "Load Profile Analysis" to begin analyzing the how frequency changes throughout the time periods in a day. In order to evaluate the service utilization, the current frequency and the optimal frequency in each direction must be compared. Based on the steps, the results should be as follows.
 
 For the AM/PM peaks, the current frequency is higher than optimal and therefore the allocated service is over-utilized. Ideally the frequency should be decreased to the minimum of 1 bus per hour to save costs and avoid running empty buses. For the mid-day time period the frequency was 0 as no buses were running at the time however by analyzing the data from task 4 and 5 we can see that the frequency can be brought up to the minimum of 1 bus per hour to accommodate the demand for mid-day service. 
 
